@@ -1,0 +1,52 @@
+package task2;
+import java.util.Scanner;
+public class grade_tracker {
+	public static void main(String rgs[]) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter numner of subjects:");
+		int sub=sc.nextInt();
+		if(sub<=0) {
+			System.out.println("Please enter valid number of subjects");
+			return;	
+		}
+		int tmarks=0;
+		int maxmarkpersubject=100;
+		for(int i =1;i<=sub;i++) {
+			System.out.print("Enter marks obtained in subject"+i+"(out of 100)=");
+			int marks=sc.nextInt();
+			if(marks<0 ||marks>maxmarkpersubject) {
+				System.out.println("Please enter valid marks in range of 0 to 100.");
+				i--;
+			}
+			else {
+				tmarks+=marks;
+			}
+		}
+		double averagePercentage= (double)tmarks/(sub* maxmarkpersubject)*100;
+		System.out.println("Total marks="+ tmarks);
+		System.out.println("Average percentage="+ averagePercentage + "%");
+		
+		String grade;
+		
+		if(averagePercentage>=90) {
+			grade="A+";
+		}
+		else if(averagePercentage>=80) {
+			grade="A";
+		}
+		else if(averagePercentage>=70) {
+			grade="B";
+		}
+		else if(averagePercentage>=60) {
+			grade="C";
+		}
+		else if(averagePercentage>=50) {
+			grade="D";
+		}
+		else {
+			grade="F";
+		}
+		System.out.println("Grade="+ grade);
+	}
+
+}
