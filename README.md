@@ -20,11 +20,4 @@ The **Grade Manager** is a Java application designed to assist educators, studen
 - **Calculate Average Grade**: Automatically compute the average grade from all entered data to gauge overall performance.
 - **Determine Letter Grade and GPA**: Convert the average grade into a letter grade and GPA based on common grading scales, providing clear insights into academic standing.
 
-## Installation
 
-To run the Grade Manager application locally, follow these steps:
-
-1. **Clone the Repository**
-
-   ```bash
-   git clone https://github.com/yourusername/grade-manager.git
